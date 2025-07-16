@@ -1,21 +1,31 @@
 # IntraGo
 
-Aplicação web para facilitar o deslocamento de estudantes, professores e servidores entre os campi da instituição, exibindo rotas, horários e pontos de parada do ônibus intra-campus.
+**IntraGo** é uma aplicação web desenvolvida para facilitar o deslocamento de estudantes, professores e servidores entre os campi da instituição, exibindo de forma clara e acessível rotas, horários e pontos de parada do sistema de ônibus intra-campus.
+
+---
 
 ## Funcionalidades
 
-- Visualização de rotas e horários do ônibus intra-campus
-- Lista de próximas paradas e pontos de parada
-- Página de avisos
-- Página de ajuda
-- Página sobre o projeto
-- Layout responsivo e moderno
-- Logos em SVG e imagens integradas
+- Visualização em tempo real das rotas e horários disponíveis
+- Mapa com localização dos pontos de parada
+- Lista com as próximas paradas
+- Página de avisos e notificações
+- Página de ajuda e suporte ao usuário
+- Página institucional com informações sobre o projeto
+- Layout moderno, responsivo e intuitivo
+- Logos em SVG e imagens integradas à interface
 
-## Tecnologias
+---
 
-- [Next.js](https://nextjs.org) (App Router)
-- Tailwind CSS
+## Tecnologias Utilizadas
+
+- [Next.js (App Router)](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- Google Maps API (para rotas e geolocalização)
+- Git + GitHub (versionamento)
+- Vercel (hospedagem)
+
+---
 
 ## Instalação e Execução
 
@@ -25,27 +35,29 @@ Clone o repositório e instale as dependências:
 npm install
 # ou
 yarn install
-```
 
-Para rodar o servidor de desenvolvimento:
 
-```bash
+Execute o servidor de desenvolvimento local:
+
+bash
+Copiar
+Editar
 npm run dev
 # ou
 yarn dev
-```
 
-Abra [http://localhost:3000](http://localhost:3000) no navegador para acessar o sistema.
+Estrutura de Pastas
+csharp
+Copiar
+Editar
+src/
+├── app/           # Páginas e componentes principais
+public/            # Logos (SVG), imagens, favicon
 
-## Estrutura de Pastas
+Sobre o Projeto
+O IntraGo foi desenvolvido por Daniel Meneses, Joaquim Gregório e Francisco Wendel como parte da disciplina TechWeb I do curso de Engenharia de Computação.
 
-- `src/app/` — Páginas e componentes principais
-- `public/` — Logos (SVG), imagens e favicon
+O projeto tem como objetivo oferecer uma solução moderna e funcional para a mobilidade acadêmica, promovendo o acesso à informação e otimizando o planejamento dos deslocamentos entre os campi.
 
-## Sobre o Projeto
-
-Desenvolvido por Daniel Meneses, Joaquim Gregório e Francisco Wendel para a disciplina TechWeb I.
-
----
-
-Para dúvidas, sugestões ou problemas, utilize a página de Ajuda do sistema.
+Contato
+Para dúvidas, sugestões ou relatos de problemas, utilize a página de Ajuda do sistema.
