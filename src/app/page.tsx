@@ -16,7 +16,7 @@ export default function Home() {
 	useEffect(() => setIsClient(true), []);
 
 	return (
-		<div className="flex flex-col items-center bg-[#f3f6fa] md:bg-white px-2 md:px-0 py-0 w-full min-h-screen">
+		<div className="flex flex-col items-center bg-[#F8F8F8] md:bg-white px-2 md:px-0 py-0 w-full min-h-screen">
 			<div className="flex flex-col flex-1 bg-white shadow-lg md:shadow-none mx-auto mt-8 md:mt-0 px-4 md:px-16 py-4 md:py-8 rounded-2xl md:rounded-none w-full max-w-[480px] md:max-w-full font-sans">
 				<NavBar onMenuClick={() => setModalOpen(true)} />
 
