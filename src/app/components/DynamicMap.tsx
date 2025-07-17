@@ -1,9 +1,10 @@
-"use client";import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+"use client";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import React from "react";
 
-const position = [-3.6842, -40.3546]; // Sobral-CE
+const position: [number, number] = [-3.6842, -40.3546]; // Sobral-CE
 const markerIcon = new L.Icon({
 	iconUrl: "https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon.png",
 	iconSize: [25, 41],
