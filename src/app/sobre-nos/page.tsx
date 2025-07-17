@@ -1,37 +1,26 @@
-"use client";
-import React, { useState } from "react";
+"use client";import React, { useState } from "react";
 import NavBar from "../components/NavBar";
-import Logo from "../components/Logo";
 import Footer from "../components/Footer";
+import BottomModal from "../components/BottomModal";
+import Image from "next/image";
 
 export default function SobreNosPage() {
 	const [modalOpen, setModalOpen] = useState(false);
 	return (
-		<div className="flex flex-col items-center bg-[#f3f6fa] md:bg-white px-2 md:px-0 py-0 w-full min-h-screen">
+		<div className="flex flex-col items-center bg-[#F8F8F8] md:bg-white px-2 md:px-0 py-0 w-full min-h-screen">
 			<div className="flex flex-col flex-1 bg-white shadow-lg md:shadow-none mx-auto mt-8 md:mt-0 px-4 md:px-16 py-4 md:py-8 rounded-2xl md:rounded-none w-full max-w-[480px] md:max-w-full font-sans">
 				<NavBar onMenuClick={() => setModalOpen(true)} />
-				<header className="md:hidden flex items-center gap-2 mb-6">
-					<button
-						onClick={() => window.history.back()}
-						className="mr-2 text-[#17404E] text-2xl"
-					>
-						<svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-							<path
-								d="M15 18l-6-6 6-6"
-								stroke="#17404E"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							/>
-						</svg>
-					</button>
-					<h1 className="font-semibold text-[#17404E] text-2xl">Sobre nós</h1>
+				<header className="md:hidden flex justify-center items-center mb-6">
+					<h1 className="w-full font-semibold text-[#17404E] text-2xl text-center">
+						Sobre nós
+					</h1>
 				</header>
 				<div className="flex flex-col flex-1 items-center">
-					<Logo />
-					<img
-						src="../Campus-UFC.jpg"
+					<Image
+						src="/Campus-UFC.jpg"
 						alt="Campus Mucambinho"
+						width={800}
+						height={320}
 						className="shadow my-6 rounded-lg w-full max-w-2xl h-56 md:h-80 object-cover"
 					/>
 					<div className="mb-4 w-full max-w-2xl text-[#17404E] text-base text-justify leading-relaxed">
@@ -55,6 +44,7 @@ export default function SobreNosPage() {
 						</p>
 					</div>
 				</div>
+				<BottomModal open={modalOpen} onClose={() => setModalOpen(false)} />
 			</div>
 			<Footer />
 		</div>
