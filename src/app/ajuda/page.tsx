@@ -1,8 +1,10 @@
-"use client";import React, { useState } from "react";
+"use client";
+import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import BottomModal from "../components/BottomModal";
 import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 export default function AjudaPage() {
 	const [modalOpen, setModalOpen] = useState(false);
@@ -34,9 +36,11 @@ export default function AjudaPage() {
 			<div className="flex flex-col flex-1 bg-white shadow-lg md:shadow-none mx-auto mt-8 md:mt-0 px-4 md:px-16 py-4 md:py-8 rounded-2xl md:rounded-none w-full max-w-[480px] md:max-w-full font-sans">
 				<NavBar onMenuClick={() => setModalOpen(true)} />
 				<div className="flex flex-col flex-1 items-center text-center">
-					<img
+					<Image
 						src="/intraGo-logo-nameless.svg"
 						alt="Logo intraGo minimalista"
+						width={48}
+						height={48}
 						className="mb-4 w-12 h-12"
 					/>
 					<p className="mb-8 text-[#17404E] text-base leading-relaxed">

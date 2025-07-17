@@ -1,6 +1,4 @@
-"use client";
-import React, { useState } from "react";
-import Logo from "./Logo";
+"use client";import React from "react";
 import {
 	BellIcon,
 	InformationCircleIcon,

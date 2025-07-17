@@ -1,6 +1,6 @@
-import React from "react";import Logo from "./Logo";
+import React from "react";
+import Logo from "./Logo";
 import HamburgerMenu from "./HamburgerMenu";
-import { usePathname } from "next/navigation";
 
 export default function NavBar({ onMenuClick }: { onMenuClick: () => void }) {
 	const pathname =

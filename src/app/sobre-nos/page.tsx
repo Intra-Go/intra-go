@@ -1,9 +1,8 @@
-"use client";
-import React, { useState } from "react";
+"use client";import React, { useState } from "react";
 import NavBar from "../components/NavBar";
-import Logo from "../components/Logo";
 import Footer from "../components/Footer";
 import BottomModal from "../components/BottomModal";
+import Image from "next/image";
 
 export default function SobreNosPage() {
 	const [modalOpen, setModalOpen] = useState(false);
@@ -17,9 +16,11 @@ export default function SobreNosPage() {
 					</h1>
 				</header>
 				<div className="flex flex-col flex-1 items-center">
-					<img
-						src="../Campus-UFC.jpg"
+					<Image
+						src="/Campus-UFC.jpg"
 						alt="Campus Mucambinho"
+						width={800}
+						height={320}
 						className="shadow my-6 rounded-lg w-full max-w-2xl h-56 md:h-80 object-cover"
 					/>
 					<div className="mb-4 w-full max-w-2xl text-[#17404E] text-base text-justify leading-relaxed">

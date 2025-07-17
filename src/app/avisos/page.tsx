@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+"use client";import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import BottomModal from "../components/BottomModal";
@@ -7,7 +6,6 @@ import {
 	ExclamationTriangleIcon,
 	CheckCircleIcon,
 	ExclamationCircleIcon,
-	BellIcon,
 	CalendarIcon,
 	InformationCircleIcon,
 } from "@heroicons/react/24/solid";
