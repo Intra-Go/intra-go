@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+"use client";import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import BottomModal from "../components/BottomModal";
@@ -12,7 +11,7 @@ export default function AjudaPage() {
 		const message = encodeURIComponent(
 			"Olá, preciso de suporte com a plataforma IntraGo!"
 		);
-		const phoneNumber = 558898148767;
+		const phoneNumber = "5588981480767";
 		// Detecta se é mobile
 		const isMobile =
 			/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
