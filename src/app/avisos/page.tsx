@@ -1,6 +1,8 @@
-"use client";import React, { useState } from "react";
+"use client";
+import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import BottomModal from "../components/BottomModal";
 import {
 	ExclamationTriangleIcon,
 	CheckCircleIcon,
@@ -63,25 +65,13 @@ const avisos = [
 export default function AvisosPage() {
 	const [modalOpen, setModalOpen] = useState(false);
 	return (
-		<div className="flex flex-col items-center bg-[#f3fa] md:bg-white px-2 py-0 w-full min-h-screen md:px0">
+		<div className="flex flex-col items-center bg-[#F8F8F8] md:bg-white px-2 py-0 w-full min-h-screen md:px0">
 			<div className="flex flex-col flex-1 bg-white shadow-lg md:shadow-none mx-auto mt-8 md:mt-0 px-4 md:px-16 py-4 md:py-8 md:rounded-none w-full max-w-[480md:max-w-full font-sans ded-2xl">
 				<NavBar onMenuClick={() => setModalOpen(true)} />
-				<header className="md:hidden flex items-center gap-2 mb-6">
-					<button
-						onClick={() => window.history.back()}
-						className="mr-2 text-[#17404E] text-2xl"
-					>
-						<svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-							<path
-								d="M15 18l-6-6"
-								stroke="#17404E"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							/>
-						</svg>
-					</button>
-					<h1 className="font-semibold text-[#17404] text-2xl">Avisos</h1>
+				<header className="md:hidden flex justify-center items-center mb-6">
+					<h1 className="w-full font-semibold text-[#17404E] text-2xl text-center">
+						Avisos
+					</h1>
 				</header>
 				<div className="flex flex-col flex-1 gap-2">
 					{avisos.map((aviso, i) => (
@@ -92,7 +82,7 @@ export default function AvisosPage() {
 							<div>{aviso.icon}</div>
 							<div className="flex-1 min-w-0">
 								<div className="text-gray-500 text-xs">{aviso.date}</div>
-								<div className="font-semibold text-[#17404] truncate">
+								<div className="font-semibold text-[#17404E] truncate">
 									{aviso.title}
 								</div>
 								<div className="text-gray-500 text-sm truncate">
@@ -102,6 +92,7 @@ export default function AvisosPage() {
 						</div>
 					))}
 				</div>
+				<BottomModal open={modalOpen} onClose={() => setModalOpen(false)} />
 			</div>
 			<Footer />
 		</div>
